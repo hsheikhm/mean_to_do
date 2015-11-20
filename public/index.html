@@ -15,6 +15,7 @@
           html         { overflow-y: scroll; }
           body         { padding-top: 50px; }
           #todo-list   { margin-bottom: 30px; }
+          #todo-form 	 { margin-bottom: 50px; }
       </style>
 
       <!-- SPELLS -->
@@ -39,7 +40,7 @@
                     <!-- LOOP OVER THE TODOS IN $scope.todos -->
                     <div class="checkbox" ng-repeat="todo in todos">
                         <label>
-                            <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }} </input>
+                            <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
                         </label>
                     </div>
 
@@ -53,7 +54,7 @@
                         <div class="form-group">
 
                             <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-                            <input type="text" class="form-control input-lg text-center" placeholder="Enter text" ng-model="formData.text"></input>
+                            <input type="text" class="form-control input-lg text-center" placeholder="Enter text" ng-model="formData.text">
                         </div>
 
                         <!-- createToDo() WILL CREATE NEW TODOS -->

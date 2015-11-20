@@ -9,7 +9,7 @@ var methodOverride = require('method-override');   // simulate DELETE and PUT (e
 
 // configuration =================
 
-mongoose.connect('mongodb://hamza:letmein@apollo.modulusmongo.net:27017/negUxo2z');   // connect to mongoDB database on modulus.io
+mongoose.connect('mongodb://node:nodeuser@apollo.modulusmongo.net:27017/negUxo2z');   // connect to mongoDB database on modulus.io
 
 app.use(express.static(__dirname + '/public'));  // set the static files location /public/img will be /img for users
 app.use(morgan('dev'));   // log every request to the console
@@ -21,7 +21,8 @@ app.use(methodOverride());
 // define model ============================
 
 var Todo = mongoose.model('Todo', {
-  text : String
+  text : String,
+  done : Boolean
 });
 
 // routes ======================================================================
